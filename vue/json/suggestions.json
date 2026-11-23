@@ -1,0 +1,35 @@
+[
+  {
+    "label": "var",
+    "type": "func",
+    "insert": "var('${0}')",
+    "detail": "var(id:string) => value:number | string<br>var(id:string, value:number | string) => ok:number",
+    "description": "Read or write a Modbus variable. Writing updates the value and, for master/local sources, the point."
+  },
+  {
+    "label": "modbus",
+    "type": "func",
+    "insert": "modbus('${0}', '${1}')",
+    "detail": "modbus(device:string | number, point:string | number) => value:number<br>modbus(device:string | number, point:string | number, value:number | string) => ok:number",
+    "description": "Read or write a Modbus profile point directly. Device and point accept an ID or a numeric Modbus address; use the ID when addresses repeat."
+  },
+  {
+    "label": "relay",
+    "type": "func",
+    "insert": "relay(${0}, ${1})",
+    "detail": "relay(n:number, state:number) => state:number",
+    "description": "Set relay n (1–2): 1 = ON, 0 = OFF. Returns -1 for an invalid n."
+  },
+  {
+    "label": "input",
+    "type": "func",
+    "insert": "input(${0})",
+    "detail": "input(n:number) => value:number",
+    "description": "Read input n (1–2): 1 = active, 0 = inactive. Returns -1 for an invalid n."
+  },
+  {
+    "label": "modbus",
+    "type": "event",
+    "detail": "a Modbus master variable changed<br>read it with var(id:string)"
+  }
+]

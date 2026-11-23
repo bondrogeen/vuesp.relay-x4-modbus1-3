@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32_Relay_X2_Modbus_V1.1 pinout</title>
+  <desc id="desc">Схема платы: два реле, два оптоизолированных входа, RS485 и питание 7-24 В.</desc>
+
+  <rect x="40" y="40" width="740" height="360" rx="18" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.35" stroke-width="2"/>
+
+  <text x="410" y="76" text-anchor="middle" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="600">ESP32_Relay_X2_Modbus_V1.1</text>
+  <text x="410" y="100" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="12">ESP32 · 2 relay · 2 input · RS485</text>
+
+  <!-- USB Type-C -->
+  <rect x="365" y="24" width="90" height="18" rx="9" fill="#1e293b" stroke="#475569"/>
+  <text x="410" y="18" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">USB Type-C (CH340)</text>
+
+  <!-- left terminal: power + RS485 + inputs -->
+  <rect x="64" y="130" width="150" height="236" rx="8" fill="#111c33" stroke="#334155"/>
+  <text x="139" y="154" text-anchor="middle" fill="#67e8f9" font-family="ui-monospace, monospace" font-size="12">POWER / BUS</text>
+
+  <g font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">
+    <text x="82" y="184">VCC  7–24 V DC</text>
+    <text x="82" y="206">GND</text>
+    <text x="82" y="238" fill="#67e8f9">A+   RS485</text>
+    <text x="82" y="260" fill="#67e8f9">B−   RS485</text>
+    <text x="82" y="292">IN1  +  (3.3–24 V)</text>
+    <text x="82" y="314">IN2  +  (3.3–24 V)</text>
+    <text x="82" y="336">GND_IN  (изолирован)</text>
+  </g>
+
+  <!-- center chip -->
+  <rect x="300" y="150" width="220" height="120" rx="10" fill="#16233d" stroke="#22d3ee" stroke-opacity="0.5"/>
+  <text x="410" y="188" text-anchor="middle" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="14">ESP32</text>
+  <text x="410" y="212" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">SP3485E · TLP785GB</text>
+  <text x="410" y="236" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">DE = GPIO32</text>
+
+  <!-- gpio labels around chip -->
+  <g font-family="ui-monospace, monospace" font-size="11" fill="#7dd3fc">
+    <text x="306" y="288">GPIO33 → Relay 1</text>
+    <text x="306" y="306">GPIO25 → Relay 2</text>
+    <text x="306" y="324">GPIO27 / 26 ← IN1 / IN2</text>
+    <text x="306" y="342">GPIO19 / 18 — RS485 TX / RX</text>
+  </g>
+
+  <!-- right terminal: relays -->
+  <rect x="606" y="130" width="150" height="236" rx="8" fill="#111c33" stroke="#334155"/>
+  <text x="681" y="154" text-anchor="middle" fill="#67e8f9" font-family="ui-monospace, monospace" font-size="12">RELAYS</text>
+
+  <g font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">
+    <text x="624" y="188">Relay 1</text>
+    <text x="624" y="210" fill="#94a3b8">NO · COM · NC</text>
+    <text x="624" y="248">Relay 2</text>
+    <text x="624" y="270" fill="#94a3b8">NO · COM · NC</text>
+    <text x="624" y="310" fill="#fbbf24">10 A / 250 V AC</text>
+    <text x="624" y="332" fill="#fbbf24">10 A / 30 V DC</text>
+  </g>
+
+  <!-- free pads -->
+  <rect x="300" y="366" width="220" height="22" rx="6" fill="#111c33" stroke="#334155"/>
+  <text x="410" y="381" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">free pads: GPIO16 · 17 · 5 · 21 · 22 · 23</text>
+
+  <!-- warning -->
+  <text x="410" y="428" text-anchor="middle" fill="#f87171" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">RS485 без гальванической изоляции · реле и входы активны низким уровнем</text>
+</svg>

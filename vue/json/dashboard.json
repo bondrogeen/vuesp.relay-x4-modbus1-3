@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ports.33",
+    "name": "relay.1",
+    "type": "button",
+    "icon": "bulb",
+    "args": [
+      "ports.33.value",
+      "ports.33"
+    ],
+    "get": "(a ? 0 : 1)",
+    "getTo": "v ? 'ON' : 'OFF'",
+    "set": "({ ...b, value: v ? 0 : 1, command: CMD.SET })"
+  },
+  {
+    "id": "ports.25",
+    "name": "relay.2",
+    "type": "button",
+    "icon": "bulb",
+    "args": [
+      "ports.25.value",
+      "ports.25"
+    ],
+    "get": "(a ? 0 : 1)",
+    "getTo": "v ? 'ON' : 'OFF'",
+    "set": "({ ...b, value: v ? 0 : 1, command: CMD.SET })"
+  },
+  {
+    "id": "ports.27",
+    "name": "input.1",
+    "type": "info",
+    "icon": "light",
+    "opts": {
+      "disabled": 1
+    },
+    "args": [
+      "ports.27.value"
+    ],
+    "getTo": "v ? 'OFF' : 'ON'"
+  },
+  {
+    "id": "ports.26",
+    "name": "input.2",
+    "type": "info",
+    "icon": "light",
+    "opts": {
+      "disabled": 1
+    },
+    "args": [
+      "ports.26.value"
+    ],
+    "getTo": "v ? 'OFF' : 'ON'"
+  },
+  {
+    "id": "ports.5",
+    "name": "G5",
+    "type": "info",
+    "icon": "plug",
+    "args": [
+      "ports.5.value"
+    ],
+    "getTo": "v ? 'HIGH' : 'LOW'"
+  },
+  {
+    "id": "ports.16",
+    "name": "RX2",
+    "type": "info",
+    "icon": "plug",
+    "args": [
+      "ports.16.value"
+    ],
+    "getTo": "v ? 'HIGH' : 'LOW'"
+  },
+  {
+    "id": "ports.17",
+    "name": "TX2",
+    "type": "info",
+    "icon": "plug",
+    "args": [
+      "ports.17.value"
+    ],
+    "getTo": "v ? 'HIGH' : 'LOW'"
+  },
+  {
+    "id": "ports.21",
+    "name": "G21",
+    "type": "info",
+    "icon": "plug",
+    "args": [
+      "ports.21.value"
+    ],
+    "getTo": "v ? 'HIGH' : 'LOW'"
+  },
+  {
+    "id": "ports.22",
+    "name": "G22",
+    "type": "info",
+    "icon": "plug",
+    "args": [
+      "ports.22.value"
+    ],
+    "getTo": "v ? 'HIGH' : 'LOW'"
+  },
+  {
+    "id": "ports.23",
+    "name": "G23",
+    "type": "info",
+    "icon": "plug",
+    "args": [
+      "ports.23.value"
+    ],
+    "getTo": "v ? 'HIGH' : 'LOW'"
+  }
+]

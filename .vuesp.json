@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vuesp.ru/schema/vuesp-project.json",
+  "name": "vuesp.relay-x2-modbus1-1",
+  "summary": "ESP32 relay board with two relays, two opto-isolated inputs and RS485 Modbus RTU slave.",
+  "description": "## Vuesp Relay X2 Modbus V1.1\n\nFirmware for the LC Technology **ESP32_Relay_X2_Modbus_V1.1** board. The project exposes two relays (GPIO33, GPIO25), two opto-isolated inputs (GPIO27, GPIO26) and six free pads (G5, RX2, TX2, G21, G22, G23) in the local Vuesp web interface.\n\nThe RS485 interface (TX GPIO19, RX GPIO18, DE GPIO32) runs as a Modbus RTU **slave** with a fixed register map, 9600 8N1 by default and 4800/9600/19200 support. Settings and status are available on the `/device/modbus/` page and are stored in ConfigStore.\n\nMaster mode is planned as a separate, mutually exclusive mode because the board has a single UART and DE line.",
+  "platforms": [
+    "ESP32"
+  ],
+  "tags": [
+    "relay",
+    "modbus",
+    "rs485",
+    "esp32",
+    "lc-technology",
+    "relay-x2"
+  ],
+  "createdWith": "vuesp-create@1.1.1",
+  "createdAt": "2026-11-21T17:13:14.799Z",
+  "template": {
+    "source": "github:bondrogeen/vuesp",
+    "ref": "master",
+    "commit": "ed7de1daa3de89e039f5712c92bc25cec97f328b"
+  }
+}
